@@ -1,22 +1,18 @@
 function showBand(band)
 {
-	alert(band.title);
-	alert(band.details.genre);
-	alert(band.details.active);
-	alert(band.details.city);
-	alert(band.details.label);
-	alert(band.details.numberAlbums);
+	alert(band.title + " is a " + band.details.genre + " band from " + band.details.city + ".");
+	alert("They are on " + band.details.label + " records and have " + band.details.numberAlbums + " albums.");
 	
 	for (var i=0; i < band.albums.length; i ++)
 	{
 		var alb  = band.albums[i];
-		alert("Album " + alb.name + " was released in " + alb.year + ".");
+		alert("The album " + alb.name + " was released in " + alb.year + ".");
 	}
 
 	for (var x = 0; x < band.members.length; x ++)
 	{
 		var mem = band.members[x];
-		alert (mem.firstName + " " + mem.lastName + " plays " + mem.instrument);
+		alert (mem.firstName + " " + mem.lastName + " plays " + mem.instrument + " in " + band.title);
 	}
 
 }
